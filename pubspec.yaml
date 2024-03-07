@@ -1,0 +1,36 @@
+name: flutter_zoom_sdk
+description: A Flutter plugin for Zoom SDK.
+version: 0.0.1
+homepage: https://github.com/rentready/flutter_zoom_sdk
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.rentready.flutter_zoom_sdk
+        pluginClass: FlutterZoomSdkPlugin
+      ios:
+        pluginClass: FlutterZoomSdkPlugin
+        sharedDarwinSource: true
+      macos:
+        pluginClass: FlutterZoomSdkPlugin
+        sharedDarwinSource: true
+      web:
+        pluginClass: FlutterZoomSdkWeb
+        fileName: flutter_zoom_sdk_web.dart
